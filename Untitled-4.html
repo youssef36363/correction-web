@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Page 4</title>
     <link rel="stylesheet" href="styles_page4.css">
+    <link rel="stylesheet" href="styles.css"> 
+   
 </head>
 <body>
 
@@ -27,21 +29,32 @@
         <p>Disponibles sur demande.</p>
     </section>
 
-    <section>
+    <div class="container">
         <h2>Contact</h2>
         <p>Num : 96759307</p>
         <p>Email : youssef.flis@esprit.tn</p>
         
-        <label for="name">Nom</label>
-        <input type="text" id="name" required minlength="3" maxlength="30" size="20"><br><br>
-        
-        <label for="surname">Prénom</label>
-        <input type="text" id="surname" required minlength="4" maxlength="30" size="20"><br><br>
-        
-        <label for="comment">Message</label>
-        <textarea name="comment" id="comment" cols="30" rows="5"></textarea><br>
-    </section>
+        <form id="contactForm">
+            <label for="name">Nom</label>
+            <input type="text" id="name" required minlength="3" maxlength="30" size="20"><br><br>
+            
+            <label for="surname">Prénom</label>
+            <input type="text" id="surname" required minlength="4" maxlength="30" size="20"><br><br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" required><br><br>
+
+            <label for="phone">Numéro de téléphone</label>
+            <input type="tel" id="phone" required pattern="[0-9]{10}"><br><br>
+            
+            <label for="comment">Message</label>
+            <textarea name="comment" id="comment" cols="30" rows="5"></textarea><br>
+
+            <button type="button" onclick="envoyerFormulaire()">Envoyer</button>
+        </form>
+    </div>
 
     <a href="Untitled-3.html">Retour</a>
 </body>
+<script src="javasript.js" defer></script> 
 </html>
